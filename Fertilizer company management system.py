@@ -7,7 +7,14 @@ class Product:
 
     def update_stock(self, quantity):
         self.stock += quantity
+        class Supplier:
+            def __init__(self, supplier_id, name, contact):
+                self.supplier_id = supplier_id
+                self.name = name
+                self.contact = contact
 
+            def __str__(self):
+                return f"Supplier[ID: {self.supplier_id}, Name: {self.name}, Contact: {self.contact}]"
     def __str__(self):
         return f"Product[ID: {self.product_id}, Name: {self.name}, Price: {self.price}, Stock: {self.stock}]"
 
